@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_18_214756) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_21_055743) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "devices", force: :cascade do |t|
+    t.string "category"
+    t.string "status"
+    t.datetime "last_checked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_devices_on_store_id"
+  end
+
+  create_table "servers", force: :cascade do |t|
+    t.string "category"
+    t.string "status"
+    t.datetime "last_checked"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_servers_on_store_id"
+  end
 
   create_table "stores", force: :cascade do |t|
     t.string "name"
@@ -22,6 +42,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_18_214756) do
     t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "short_name"
+    t.text "website_url"
   end
 
 end
