@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_21_055743) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_21_163717) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_055743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "store_id"
+    t.text "url"
     t.index ["store_id"], name: "index_servers_on_store_id"
   end
 
@@ -43,7 +44,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_055743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "short_name"
-    t.text "website_url"
   end
 
 end
