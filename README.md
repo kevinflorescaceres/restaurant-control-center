@@ -71,11 +71,3 @@ Modelo correspondiente a los distintos servidores de una tienda (belongs_to Tien
 [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): utilizada versión 5.0.2
 
 [Online Web Fonts](https://onlinewebfonts.com/): utilizado para obtener fuentes adineue Pro y adineue Pro Bold 
-
-## Deuda Técnica
-
-Durante el desarrollo de esta aplicación se reconocieron distintas áreas de mejora. Estas se listan a continuación:
-
-* Creación de un controlador dedicado para la vista principal (en vez de usar el controlador Application)
-
-* Mejora del método query_status perteneciente al modelo Store
