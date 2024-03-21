@@ -8,10 +8,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://db.onlinewebfonts.com/c/b82329475307e0380dc1ea23f0c35266?family=adineue+PRO" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/1938eca97ab5576ba37b537143f552ef?family=adineue+PRO+Bold" rel="stylesheet">
     <%= javascript_importmap_tags %>
   </head>
 
   <body class="min-h-100vh bg-transparent">
     <%= yield %>
   </body>
+  <footer class="mt-5">
+    <div class="text-center fs-6">Kevin Flores, 2024. Fonts: <a href="http://www.onlinewebfonts.com" class="text-reset">Web Fonts</a></div>
+  </footer>
 </html>

@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face{
+    font-family: "adineue PRO";
+    src: url("b82329475307e0380dc1ea23f0c35266.eot");
+    src: url("b82329475307e0380dc1ea23f0c35266.eot?#iefix")format("embedded-opentype"),
+        url("b82329475307e0380dc1ea23f0c35266.woff")format("woff"),
+        url("b82329475307e0380dc1ea23f0c35266.woff2")format("woff2"),
+        url("b82329475307e0380dc1ea23f0c35266.ttf")format("truetype"),
+        url("b82329475307e0380dc1ea23f0c35266.svg#adineue PRO")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family: "adineue PRO Bold";
+    src: url("1938eca97ab5576ba37b537143f552ef.eot");
+    src: url("1938eca97ab5576ba37b537143f552ef.eot?#iefix")format("embedded-opentype"),
+        url("1938eca97ab5576ba37b537143f552ef.woff")format("woff"),
+        url("1938eca97ab5576ba37b537143f552ef.woff2")format("woff2"),
+        url("1938eca97ab5576ba37b537143f552ef.ttf")format("truetype"),
+        url("1938eca97ab5576ba37b537143f552ef.svg#adineue PRO Bold")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
