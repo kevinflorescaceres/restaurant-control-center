@@ -37,6 +37,6 @@
         </li>
     </ul>
     <div class="card-body text-center">
-        <%= link_to "Ir a #{store.short_name}", store.website_url, class: "btn #{color_button_main(store.short_name)}" %>
+        <%= link_to "Ir a #{store.short_name}", store.web.url, class: "btn #{color_button_main(store.short_name)}", target: "_blank" %>
     </div>
   </div>
