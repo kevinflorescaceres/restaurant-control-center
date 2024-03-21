@@ -3,11 +3,19 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    padding: 5% 10% 0;
+    padding: 0 10%;
 }
 p, span, a, li {
     font-family: "adineue PRO";
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: "adineue PRO Bold";
+}
+.card-body .button-color-keu {
+    color: #ffffff;
+    background-color: #FF22A6;
+}
+.card-body .button-color-aguacate {
+    color: #ffffff;
+    background-color: #60B101;
 }
