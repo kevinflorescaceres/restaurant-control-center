@@ -17,4 +17,14 @@ class Store < ApplicationRecord
   def database
     servers.find_by(category: 'database')
   end
+
+  def query_status
+    if printer.status == 'ok' && servers.all? { |server| server.status == 'ok' }
+      status == 'ok' ? update(last_checked: Time.zone.now.to_datetime) : update(status: 'ok', last_checked: Time.zone.now.to_datetime)
+    elsif printer.status == 'error' && servers.all? { |server| server.status == 'error' }
+      status == 'error' ? update(last_checked: Time.zone.now.to_datetime) : update(status: 'error', last_checked: Time.zone.now.to_datetime)
+    else
+      status == 'warning' ? update(last_checked: Time.zone.now.to_datetime) : update(status: 'warning', last_checked: Time.zone.now.to_datetime)
+    end
+  end
 end
