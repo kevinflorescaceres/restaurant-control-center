@@ -3,6 +3,13 @@ class Device < ApplicationRecord
   validates :category, :status, presence: true
   validates :category, uniqueness: { scope: :store_id }
 
+  enum :status, { 'ok': 0, 'error': 1 }
+
+  HUMAN_STATUS = {
+    'ok' => 'Ok',
+    'error' => 'Error'
+  }.freeze
+
   def query_status
     if status == 'ok'
       might_disconnect

@@ -3,7 +3,7 @@
     <div class="card-body">
         <div class="d-flex justify-content-between align-items-center mb-2"> 
             <h5 class="card-title"><%= store.name %></h5>
-            <h6 class="card-subtitle <%= status_color(store.status) %>"><%= store.status %></h6>
+            <h6 class="card-subtitle <%= status_color(store.status) %>"><%= Store::HUMAN_STATUS[store.status] %></h6>
         </div>
       <p class="card-subtitle text-muted">Última actualización: <%= l(store.last_checked, format: :niu_format) %></p>
     </div>
@@ -12,7 +12,7 @@
             <div class="d-inline-flex justify-content-between w-100">
                 <div class="d-flex">
                     <span>Impresora: &nbsp</span>
-                    <span class="<%= status_color(store.printer.status) %>"><%= store.printer.status %></span> 
+                    <span class="<%= status_color(store.printer.status) %>"><%= Device::HUMAN_STATUS[store.printer.status] %></span> 
                 </div>
                 <span class="fs-6 text-muted">(<%= l(store.printer.last_checked, format: :niu_format) %>)</span>
             </div>
@@ -21,7 +21,7 @@
             <div class="d-inline-flex justify-content-between w-100">
                 <div class="d-flex">
                     <span>Servidor web: &nbsp</span>
-                    <span class="<%= status_color(store.web.status) %>"><%= store.web.status %></span> 
+                    <span class="<%= status_color(store.web.status) %>"><%= Server::HUMAN_STATUS[store.web.status] %></span> 
                 </div>
                 <span class="fs-6 text-muted">(<%= l(store.web.last_checked, format: :niu_format) %>)</span>
             </div>
@@ -30,7 +30,7 @@
             <div class="d-inline-flex justify-content-between w-100">
                 <div class="d-flex">
                     <span>Base de datos: &nbsp</span>
-                    <span class="<%= status_color(store.database.status) %>"><%= store.database.status %></span> 
+                    <span class="<%= status_color(store.database.status) %>"><%= Server::HUMAN_STATUS[store.database.status] %></span> 
                 </div>
                 <span class="fs-6 text-muted">(<%= l(store.database.last_checked, format: :niu_format) %>)</span>
             </div>

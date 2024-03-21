@@ -4,6 +4,13 @@ class Server < ApplicationRecord
   validates :category, :status, presence: true
   validates :category, uniqueness: { scope: :store_id }
 
+  enum :status, { 'ok': 0, 'error': 1 }
+
+  HUMAN_STATUS = {
+    'ok' => 'Ok',
+    'error' => 'Error'
+  }.freeze
+
   def query_status
     server_online = up?(url)
     if server_online

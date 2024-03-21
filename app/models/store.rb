@@ -6,6 +6,14 @@ class Store < ApplicationRecord
   has_many :servers
   validates :name, :category, :status, :photo_url, presence: true
 
+  enum :status, { 'ok': 0, 'warning': 1, 'error': 2 }
+
+  HUMAN_STATUS = {
+    'ok' => 'Ok',
+    'warning' => 'Advertencia',
+    'error' => 'Error'
+  }.freeze
+
   def printer
     devices.find_by(category: 'printer')
   end
