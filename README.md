@@ -59,6 +59,13 @@ Modelo correspondiente a los distintos servidores de una tienda (belongs_to Tien
 
 2. Bases de datos: A falta de bases de datos reales de restaurantes a las cuales poder consultar por su estado, se decidió acoplar el estado de la base de datos de un servidor al estado de su servidor web. Esto va a cambiar en una futura versión, en la medida que aparezca una base de datos a la cual hacer 'ping' para consultar su estado.
 
+### Recarga dinámica
+
+Como primera solución, se propuso la recarga cada 30 segundos de la página principal. Como la recarga de estado de las tiendas se realiza cada 30 segundos, esto aseguraría que se muestre cada cambio de estado al menos una vez.
+
+Como segunda solución se implementó la recarga de las vistas parciales de cada tienda (nuevamente cada 30 segundos), sin tener que recurrir a refrescar la página completa. Esta se identificó como una solución más adecuada para los requerimientos actuales de los sitios web. Esto se realizó utilizando StimulusJS.
+
+Finalmente, se identifica como una oportunidad de mejora de la aplicación implementar una recarga dinámica al momento de la actualización de los datos de las tiendas. Esto es abordable utilizando frameworks de JS, tales como React y Vue.JS; sin embargo, se buscó realizar esta prueba de concepto sin dichas herramientas. 
 
 ### Gemas usadas
 
