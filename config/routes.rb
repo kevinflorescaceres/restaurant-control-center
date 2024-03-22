@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "stores#dashboard"
+
+  get 'stores/:id/show', to: 'stores#show', as: 'show'
 end

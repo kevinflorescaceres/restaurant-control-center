@@ -4,6 +4,14 @@
         <h2 class="">UIN Foods</h2>
     </div>
     <div class="d-flex justify-content-around">
-        <%= render @stores %>
+        <% @stores.each do |store| %>
+            <div
+            data-controller="poll"
+            data-poll-url-value="<%= show_path(store) %>"
+            data-poll-refresh-interval-value="30000"
+        >
+            This content will be reloaded every 30 seconds.
+        </div>
+        <% end %>
     </div>
 </main>
